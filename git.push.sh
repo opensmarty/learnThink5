@@ -1,16 +1,24 @@
 #!/bin/bash
+#提交说明参数，命令没带参数，则设m为空
 m=$1
 if [ -z $1 ]
 then
     m=""
 fi
+
+#根目录
 root=$(pwd)
 cd $root
+
+#项目名称
 project=${root##*/}
+
+#远程分支
 branch[0]="git@development:repos/$project.git"
 branch[1]="git@github.com:opensmarty/$project.git"
 branch[2]="git@git.oschina.net:opensmarty/$project.git"
 
+#提交函数
 push(){
     index=0
     for val in ${branch[@]}
@@ -32,6 +40,7 @@ push(){
     done
 }
 
+#执行过程
 echo "项目【$project】开始更新"
 push
 echo "更新结束"
