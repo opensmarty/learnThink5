@@ -3,12 +3,12 @@ m=$1
 root=$(pwd)
 cd $root
 project=${root##*/}
-remoteURl[0]="git@github.com:opensmarty/$project.git"
-remoteURl[1]="git@git.oschina.net:opensmarty/$project.git"
+branch[0]="git@github.com:opensmarty/$project.git"
+branch[1]="git@git.oschina.net:opensmarty/$project.git"
 
 push(){
     index=0
-    for val in ${remoteURl[@]}
+    for val in ${branch[@]}
     do
         domain=`expr ${val%:*} | cut -d"@" -f2`
         if [[ $(git remote -v) =~ $val ]]
