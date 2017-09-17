@@ -1,5 +1,9 @@
 #!/bin/bash
 m=$1
+if [ -z $1 ]
+then
+    m=""
+fi
 root=$(pwd)
 cd $root
 project=${root##*/}
