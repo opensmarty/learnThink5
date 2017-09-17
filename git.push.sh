@@ -3,8 +3,9 @@ m=$1
 root=$(pwd)
 cd $root
 project=${root##*/}
-branch[0]="git@github.com:opensmarty/$project.git"
-branch[1]="git@git.oschina.net:opensmarty/$project.git"
+branch[0]="git@development:repos/$project.git"
+branch[1]="git@github.com:opensmarty/$project.git"
+branch[2]="git@git.oschina.net:opensmarty/$project.git"
 
 push(){
     index=0
