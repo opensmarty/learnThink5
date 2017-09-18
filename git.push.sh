@@ -1,9 +1,11 @@
 #!/bin/bash
 #提交说明参数，命令没带参数，则设m为空
-m=$1
+
 if [ -z $1 ]
 then
-    m=""
+    m="ok, this is empty info for committing."
+else
+    m=$1
 fi
 
 #根目录
@@ -24,13 +26,17 @@ push(){
     for val in ${branch[@]}
     do
         domain=`expr ${val%:*} | cut -d"@" -f2`
+        if [[ $domain == "development" ]]
+        then
+            domain="origin"
+        fi
         if [[ $(git remote -v) =~ $val ]]
         then
             echo "分支[$index]:$domain"
             git pull $domain master
             git add .
             git status
-            git commit -m $m
+            git commit -m "$m"
             git push $domain master
         else
             git remote add $domain $val
