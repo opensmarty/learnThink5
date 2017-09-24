@@ -13,8 +13,5 @@ CREATE TABLE `os_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
-<<<<<<< HEAD
+
 insert into `os_user`(`id`,`user_name`,`password`,`login_times`,`last_login_ip`,`last_login_time`,`real_name`,`status`,`role_id`) values('1','admin','21232f297a57a5a743894a0e4a801fc3','42','127.0.0.1','1506228095','admin','1','1');
-=======
-insert into `os_user`(`id`,`user_name`,`password`,`login_times`,`last_login_ip`,`last_login_time`,`real_name`,`status`,`role_id`) values('1','admin','21232f297a57a5a743894a0e4a801fc3','42','127.0.0.1','1506215037','admin','1','1');
->>>>>>> 4abd2eb0b10c31c1867fff5d171f96d947edba89
