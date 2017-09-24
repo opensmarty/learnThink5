@@ -20,8 +20,9 @@
         "topthink/framework": "~5.0.0",
         "topthink/think-queue": "^2.0",
         "topthink/think-migration": "^2.0",
+        "topthink/think-image": "^1.0",
         "topthink/think-captcha": "^2.0",
-        "topthink/think-image": "^1.0"
+        "topthink/think-installer": "^1.0"
     },
     "extra": {
         "think-path": "thinkphp"

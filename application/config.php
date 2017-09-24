@@ -17,9 +17,9 @@ return [
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -87,7 +87,7 @@ return [
     // URL普通方式参数 用于自动生成
     'url_common_param'       => false,
     // URL参数方式 0 按名称成对解析 1 按顺序解析
-    'url_param_type'         => 0,
+    'url_param_type'         => 1,
     // 是否开启路由
     'url_route_on'           => true,
     // 路由使用完整匹配
@@ -173,6 +173,9 @@ return [
         'level' => [],
     ],
 
+    //各模块公用配置
+    'extra_config_list' => ['database', 'route', 'validate'],
+
     // +----------------------------------------------------------------------
     // | Trace设置 开启 app_trace 后 有效
     // +----------------------------------------------------------------------
@@ -238,4 +241,10 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+    //加密串
+    'salt' => 'wZPb~yxvA!ir38&Z',
+    //备份数据地址
+    'back_path' => APP_PATH .'../back/',
+
 ];

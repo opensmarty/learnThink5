@@ -1,10 +1,12 @@
 <?php
 namespace app\index\controller;
 
-class Index
+use think\Controller;
+
+class Index extends Controller
 {
     public function index()
     {
-        return 'Hello, everyone! My name is opensmarty and I can help you for the next.';
+        return $this->fetch();
     }
 }
