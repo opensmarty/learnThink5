@@ -32,7 +32,11 @@ class Data extends Base
 
         }
         $this->assign([
+<<<<<<< HEAD
             'tables' => $tables
+=======
+           'tables' => $tables
+>>>>>>> 4abd2eb0b10c31c1867fff5d171f96d947edba89
         ]);
 
         return $this->fetch();

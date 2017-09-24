@@ -23,6 +23,7 @@
         message.innerText = msg;
     }
 </script>
+<<<<<<< HEAD
 {php}
 use think\Db;
 // 连接数据库
@@ -37,4 +38,20 @@ $conf = write_config($db_config);
 
 echo "<script type=\"text/javascript\">location.href='". request()->domain() ."/install/index/complete.html'</script>";
 {/php}
+=======
+    {php}
+    use think\Db;
+    // 连接数据库
+    $db_config = session('db_config');
+    $db_instance = Db::connect($db_config);
+
+    // 创建数据表
+    create_tables($db_instance, $db_config['prefix']);
+
+    // 创建配置文件
+    $conf = write_config($db_config);
+
+    echo "<script type=\"text/javascript\">location.href='". request()->domain() ."/install/index/complete.html'</script>";
+    {/php}
+>>>>>>> 4abd2eb0b10c31c1867fff5d171f96d947edba89
 {/block}
